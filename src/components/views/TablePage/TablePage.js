@@ -26,7 +26,7 @@ const TablePage = () => {
   } = useForm();
 
   const handleForm = () => {
-    if (status && people && maxPeople && bill) {
+    if (status) {
       dispatch(editTableRequest({ status, peopleAmount: people, maxPeopleAmount: maxPeople, bill, id: table.id }));
       navigate('/');
     }
@@ -48,7 +48,7 @@ const TablePage = () => {
         setPeople(maxPeople);
       }
     }
-  }, [status, maxPeople, people, render]);
+  }, [status, maxPeople, people]);
 
   if (!table) return <Navigate to="/" />;
   else
