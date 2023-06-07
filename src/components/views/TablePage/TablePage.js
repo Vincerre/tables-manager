@@ -48,7 +48,7 @@ const TablePage = () => {
         setPeople(maxPeople);
       }
     }
-  }, [status, maxPeople, people]);
+  }, [status, maxPeople, people, render]);
 
   if (!table) return <Navigate to="/" />;
   else
